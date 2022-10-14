@@ -1,12 +1,11 @@
 title: omer faruk zorlu
 email: omer@zor.lu
-description: "Developer"
+description: "Software Developer"
 baseurl: ""
-url: "https://blog.zor.lu" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.zor.lu"
 twitter_username: omerfarukz
 github_username:  omerfarukz
 
-# Build settings
 theme: minima
 plugins:
   - jekyll-feed

@@ -3,18 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
+TL;DR;,
+Nothing here. Go to home page, please.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
-
-hello
+Hey,
+It is Omer. Thanks for wondering my about page. There no much informatin here. This page is used for tuning themes like a placeholder. Thanks. 
