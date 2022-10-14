@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-TL;DR;,
+TL;DR;
 Nothing here. Go to home page, please.
 
 Hey,
