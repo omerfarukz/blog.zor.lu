@@ -4,14 +4,13 @@ title:  "DataFlow, a hidden gem of TPL"
 date:   2022-10-11 22:35:35 +0300
 categories: Task parallel library, dotnet
 ---
-
-Do you need to execute taks in chain like pipeline and configure these to multithreaded without having a haedache? Data flow may help you.
+Do you need to execute tasks in a chain like a pipeline and configure these to work multithread without having a headache? Data flow may help you.
 
 Last week I was looking for a library for my ETL(Extract Transform Load) tasks. The task is based on transferring data from different kinds of sources to another. So, data sources and targets were completely different kinds of animals. While looking for mature ETL libraries I also read DataFlow documents because most dotnet libraries rely on that. I already used DataFlow for other cases in the past few years of course because it is efficient to have control over parallel tasks.
 
 I have implemented a benchmark tool named WebBen[chmark]. An action block to fetch/invoke an http(s) page store statistics over throughput. I have to send a concurrent request as I can. But I never need to have a chain of them. I confess I am impressed. DataFlow may your favourite for your next project.
 
-It is very easy to have a flow using the internal API of dotnet. No need to use another library for solving dozens of tasks your own. If you have a library not based on DataFlow, do not worry about it. Using an existing code base is probably easier than you think.
+It is very easy to have a flow using the internal API of dotnet. No need to use another library for solving dozens of tasks on your own. If you have a library not based on DataFlow, do not worry about it. Using an existing code base is probably easier than you think.
 
 In basic, there are three kinds of interface. These are called a block because they are designed to link one or more to the next one or another. We can configure all blocks for their parallelism and bounded capacities individually.
 
@@ -20,17 +19,17 @@ In basic, there are three kinds of interface. These are called a block because t
 - ITransformBlock<TInput, TOutput>
 
 ## ISourceBlock<TOutput>
-Source block basicly designed to produce TOutput typed data.
+The source block is designed to produce TOutput typed data.
 
 ## ITargetBlock<TInput>
-Target block is like a method has TInput typed method.
+Target block is like a method that has TInput typed method.
 
 ## ITransformBlock<TInput, TOutput>
 Transform block consumes TInput and produces TOutput.
 
-In this article I planned to demonstrate an implementation of simple hash calculator flow.
+In this article, I planned to demonstrate an implementation of a simple hash calculator flow.
 
-Following code sample is downloads bytes of data for given Uri. It will be work in 50(max) parallel threads.
+The following code sample downloads bytes of data for a given Uri. It will work in 50(max) parallel threads.
 
 ```csharp
 var sharedHttpClient = new HttpClient();
@@ -41,7 +40,7 @@ var downloadBytesBlock = new TransformBlock<Uri, byte[]>(async f =>
 }, new ExecutionDataflowBlockOptions() {MaxDegreeOfParallelism = 50});
 ```
 
-Next block to calculate hash of content bytes. Buffers 100 of inputs and processes in 30(max) parallel threads.
+Next block to calculate hash of content bytes. Only had 100 inputs at a time and processes in 30(max) parallel threads.
 
 ```csharp
 var calculateHashBlock = new TransformBlock<byte[], string>(input =>
@@ -68,7 +67,4 @@ downloadBytesBlock.Complete();
 await printContentBlock.Completion;
 ```
 
-All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity is the maximum number of messages that may be buffered by the block.
-
-## How it works actually?
-*TODO: what is happening under the hood. events etc.*
+All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity is the maximum number of messages that may be buffered by the block. There are other built-in blocks like TansformManyBlock. I will try to describe how does dataflow actually works under the hood.
