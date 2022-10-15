@@ -1,8 +1,14 @@
 title: Hi, I am omer@zor.lu
 description: "Software Developer"
-author:
-  name: Omer Faruk Zorlu
-  email: "omer@zor.lu"
+name: Omer Faruk Zorlu
+email: "omer@zor.lu"
+
+twitter_username: omerfarukz
+github_username:  omerfarukz
+linkedin_username: omerfarukz
+rss: rss
+
+show_excerpts: true
 
 theme: minima
 minima:
@@ -13,6 +19,7 @@ minima:
     github: omerfarukz
     stackoverflow: "2137094"
     linkedin: omerfarukz
+
 
 plugins:
   - jekyll-feed
