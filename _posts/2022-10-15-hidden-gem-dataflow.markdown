@@ -5,10 +5,6 @@ date:   2022-10-11 22:35:35 +0300
 categories: Task parallel library, dotnet
 ---
 
-## TL;DR;
-This is a page to test jekyll's abilities and also helps me to improve my skills. So, it is not ready to read.
-
-## Story
 Do you need to solve chain of taks in parallel and configure individually? Data flow may help you.
 
 Last week I was looking for a library for my ETL(Extract Transform Load) tasks. The task is based on transferring data from different kinds of sources to another. So, data sources and targets were completely different kinds of animals. While looking for mature ETL libraries I also read DataFlow documents because most dotnet libraries rely on that. I already used DataFlow for other cases in the past few years of course because it is efficient to have control over parallel tasks.
