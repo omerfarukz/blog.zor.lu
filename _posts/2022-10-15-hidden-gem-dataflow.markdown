@@ -5,7 +5,7 @@ date:   2022-10-11 22:35:35 +0300
 categories: Task parallel library, dotnet
 ---
 
-Do you need to execute taks in chain like pipeline and configure these parallel and configure individually? Data flow may help you.
+Do you need to execute taks in chain like pipeline and configure these to run as different parallellism? Data flow may help you.
 
 Last week I was looking for a library for my ETL(Extract Transform Load) tasks. The task is based on transferring data from different kinds of sources to another. So, data sources and targets were completely different kinds of animals. While looking for mature ETL libraries I also read DataFlow documents because most dotnet libraries rely on that. I already used DataFlow for other cases in the past few years of course because it is efficient to have control over parallel tasks.
 
