@@ -4,7 +4,7 @@ title:  "DataFlow, a hidden gem of TPL"
 date:   2022-10-11 22:35:35 +0300
 categories: Task parallel library, dotnet
 ---
-Do you need to execute tasks in a chain like a pipeline and configure these to work multithread without having a headache? The data flow may help you.
+Do you need to execute tasks in a chain like a pipeline and configure these to work multithread without having a headache? In that case, DataFlow may help you.
 
 Last week I was looking for a library for my ETL(Extract Transform Load) tasks. The task is based on transferring data from different kinds of sources to another. So, data sources and targets were completely different kinds of animals. While looking for mature ETL libraries I also read DataFlow documents because most dotnet libraries rely on that. I already used DataFlow for other cases in the past few years of course because it is efficient to have control over parallel tasks.
 
