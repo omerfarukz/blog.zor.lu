@@ -26,7 +26,7 @@ Source block basicly designed to produce TOutput typed data.
 Target block is like a method has TInput typed method.
 
 ## ITransformBlock<TInput, TOutput>
-Transform block is used for a transform data from TInput to TOutput type. It is not a static mapper. It is designed for processing input to produce output.
+Transform block consumes TInput and produces TOutput.
 
 In this article I planned to demonstrate an implementation of simple hash calculator flow.
 
@@ -68,7 +68,7 @@ downloadBytesBlock.Complete();
 await printContentBlock.Completion;
 ```
 
-All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity like a buffer for storing given amount input dat before actual process.
+All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity is the maximum number of messages that may be buffered by the block.
 
 ## How it works actually?
 *TODO: what is happening under the hood. events etc.*
