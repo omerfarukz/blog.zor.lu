@@ -9,6 +9,7 @@ linkedin_username: omerfarukz
 rss: rss
 
 show_excerpts: true
+google_analytics: UA-G-FD461DPJH3
 
 theme: minima
 minima:
