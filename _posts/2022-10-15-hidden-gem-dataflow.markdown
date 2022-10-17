@@ -67,4 +67,4 @@ downloadBytesBlock.Complete();
 await printContentBlock.Completion;
 ```
 
-All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity is the maximum number of messages that may be buffered by the block. There are other built-in blocks like TansformManyBlock. I might be to describe how does dataflow actually works under the hood on later articles.
+All blocks are implemented to work with different parallelism and bounded capacity configurations. Bounded capacity is the maximum number of messages that may be buffered by the block. There are other built-in blocks like TansformManyBlock. I might be to describe how does dataflow actually works under the hood on later posts.
