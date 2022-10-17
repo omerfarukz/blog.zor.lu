@@ -1,13 +1,16 @@
-title: Hi, I am omer@zor.lu
+title: omer faruk zorlu
+email: omer@zor.lu
+title: Hi, I am omer zorlu
 description: "Software Developer"
-name: Omer Faruk Zorlu
-email: "omer@zor.lu"
-
+baseurl: ""
+url: "https://blog.zor.lu"
 twitter_username: omerfarukz
 github_username:  omerfarukz
-linkedin_username: omerfarukz
-rss: rss
+author:
+  name: Omer Faruk Zorlu
+  email: "omer@zor.lu"
 
+google_analytics: "G-FD461DPJH3"
 show_excerpts: true
 
 remote_theme: jekyll/minima
@@ -20,6 +23,7 @@ minima:
     github: omerfarukz
     stackoverflow: "2137094"
     linkedin: omerfarukz
+
 
 
 plugins:
