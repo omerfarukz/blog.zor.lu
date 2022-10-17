@@ -9,9 +9,9 @@ linkedin_username: omerfarukz
 rss: rss
 
 show_excerpts: true
-google_analytics: G-FD461DPJH3
 
-theme: minima
+remote_theme: jekyll/minima
+
 minima:
   skin: auto
   date_format: "%b %-d, %Y"
@@ -24,6 +24,7 @@ minima:
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 exclude:
 - .sass-cache/
